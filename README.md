@@ -11,7 +11,7 @@ Make est un outil permettant d'organiser et simplifier la compilation du code.
 2. Remplacer les variables DEPS, OBJ, TARGET (et CFLAGS si besoin)
 
 ### 2 - Compilation et génération des exécutables
-Il faut au préalable se déplacer dans le répertoire contenant le fichier Makefile ou utiliser l'option -f
+Il faut au préalable se déplacer dans le répertoire contenant le fichier Makefile ou utiliser l'option -f.
 ```bash
 make
 ```
