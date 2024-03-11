@@ -21,3 +21,26 @@ make clean
 
 
 **Note** : La configuration actuelle implique que les fichiers soient dans le même dossier.
+
+### Exemple
+|__recursivite.c : contient des fonctions ayant tableau.h comme dépendance
+|__tableau.c : contient la déclaration de fonctions de manipulation de tableaux
+|__tableau.h : contient des prototypes de fonctions de manipulation de 
+
+La configuration associée du Makefile serait alors :
+```
+CC=gcc
+CFLAGS=-W -Wall -Wextra -Werror -O0
+DEPS=tableau.h
+OBJ=recursivite.o tableau.o
+TARGET=recursivite
+
+%.o: %.c $(DEPS)
+	$(CC) -c -o $@ $< $(CFLAGS)
+
+all: $(OBJ)
+	$(CC) -o $(TARGET) $^
+
+clean:
+	rm -f $(OBJ) $(TARGET)
+```
