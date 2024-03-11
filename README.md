@@ -29,7 +29,7 @@ make clean
 ```
 |__recursivite.c : contient des fonctions ayant tableau.h comme dépendance
 |__tableau.c : contient la déclaration de fonctions de manipulation de tableaux
-|__tableau.h : contient des prototypes de fonctions de manipulation de 
+|__tableau.h : contient des prototypes de fonctions de manipulation de tableaux
 ```
 
 La configuration associée du Makefile serait alors :
