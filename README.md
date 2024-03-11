@@ -2,19 +2,22 @@
 
 Make est un outil permettant d'organiser et simplifier la compilation du code.
 
-## Utiliser
+## Utilisation
 
-### Configuration
+### 1 - Configuration
+
+0. Installer make via ```sudo apt install make```
 1. Déplacer le fichier Makefile dans votre dossier de travail
 2. Remplacer les variables DEPS, OBJ, TARGET (et CFLAGS si besoin)
 
-### compilation et génération dex exécutables
+### 2 - Compilation et génération des exécutables
 Il faut au préalable se déplacer dans le répertoire contenant le fichier Makefile ou utiliser l'option -f
 ```bash
 make
 ```
+Il suffit alors de lancer l'exécutable généré.
 
-### Nettoyer le répertoire des fichiers objet et exécutables
+### 3 - Nettoyer le répertoire des fichiers objet et exécutables
 ```bash
 make clean
 ```
@@ -22,10 +25,12 @@ make clean
 
 **Note** : La configuration actuelle implique que les fichiers soient dans le même dossier.
 
-### Exemple
+### 4 - Exemple
+```
 |__recursivite.c : contient des fonctions ayant tableau.h comme dépendance
 |__tableau.c : contient la déclaration de fonctions de manipulation de tableaux
 |__tableau.h : contient des prototypes de fonctions de manipulation de 
+```
 
 La configuration associée du Makefile serait alors :
 ```
